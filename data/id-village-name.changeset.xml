@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="CGImap 0.8.8 (1041 spike-06.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+ <changeset id="8316792" created_at="2011-06-02T07:25:08Z" closed_at="2011-06-02T08:41:21Z" open="false" user="jeffhaack" uid="81521" min_lat="-9.5635008" min_lon="100.0506869" max_lat="3.4517476" max_lon="125.6458452" comments_count="3" changes_count="30732">
+  <tag k="comment" v="indonesia village name import"/>
+  <tag k="created_by" v="JOSM/1.5 (4064 en)"/>
+ </changeset>
+</osm>
