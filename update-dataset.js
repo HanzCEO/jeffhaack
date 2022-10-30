@@ -31,9 +31,15 @@ function batch(array, n) {
 	return a;
 }
 
-function saveRow(ws, index, node) {
+async function saveRow(ws, index, node) {
 	let row = [index, node.id];
-	ws.write(`${row.join(MAGIC_SEP)}\n`);
+
+	return new Promise((resolve, reject) => {
+		ws.write(`${row.join(MAGIC_SEP)}\n`, (error) => {
+			if (error) reject(error);
+			resolve();
+		});
+	});
 }
 
 function getProgress(file) {
@@ -87,7 +93,7 @@ async function main() {
 			// Our filter is nodes that are initial
 			if (n.version > 1) continue;
 
-			saveRow(ws, ind + i, n);
+			await saveRow(ws, ind + i, n);
 		}
 
 		ind += batchSize;
