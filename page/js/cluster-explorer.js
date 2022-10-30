@@ -14,7 +14,7 @@ function frame(lat, lon) {
 }
 
 async function getClusterData(data, name) {
-	let res = await fetch(`/data/${data}/clusters/${name}`);
+	let res = await fetch(`./data/${data}/clusters/${name}`);
 	let text = await res.text();
 
 	let rows = text.split('\n').map(r => {
@@ -55,7 +55,7 @@ async function displayClusterData(nodeId) {
 window.exploreCluster = async function(datasetName, clusterName) {
 	document.getElementById('main').classList.toggle('huge');
 
-	let res = await fetch('/page/clusterExplorer.html');
+	let res = await fetch('./page/clusterExplorer.html');
 	let html = await res.text();
 
 	document.getElementById('main').innerHTML = html;
